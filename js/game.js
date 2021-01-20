@@ -75,6 +75,7 @@ class Game
             let card = this.create_card(name);
             card.set_click_handler(function() {
                 console.log("play card " + name);
+                playCard(i); // do closures exist in JS??
                 self.play(card);
             });
             this.players[0].hand.add_card(card);
